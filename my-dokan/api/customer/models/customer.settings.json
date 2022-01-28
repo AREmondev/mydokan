@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "father_name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "village": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "new": {
+      "type": "boolean"
+    },
+    "transitions": {
+      "collection": "transition"
+    },
+    "total_due": {
+      "type": "biginteger"
+    },
+    "previous_due": {
+      "type": "biginteger"
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "orders": {
+      "via": "customers",
+      "collection": "order"
+    }
+  }
+}

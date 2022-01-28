@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transitions",
+  "info": {
+    "name": "transition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time": {
+      "type": "date"
+    },
+    "Note": {
+      "type": "richtext"
+    },
+    "payment": {
+      "type": "biginteger"
+    },
+    "customer_id": {
+      "type": "string"
+    }
+  }
+}
