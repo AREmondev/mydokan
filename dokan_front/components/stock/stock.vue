@@ -175,7 +175,7 @@ export default {
                 let url = API_URL(`stocks/`);
                 let token = "Bearer " + localStorage.getItem("token")
                 this.$axios.post(url, data, {headers: {Authorization: token}}).then(response => {
-                    console.log(response)
+                    
                     if(response.status == 200){
                         // this.$router.push("/all-orders")
                     }
