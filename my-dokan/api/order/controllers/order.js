@@ -17,7 +17,7 @@ module.exports = {
       const entityCtr = await strapi.services.customer.findOne({ "id": ctx.request.body.customer._id });
       console.log(entityCtr)
       await strapi.services.customer.update({ "id": ctx.request.body.customer._id }, {
-        "total_due": entityCtr.total_due + ctx.request.body.total_due
+        "total_due": parseInt(entityCtr.total_due) + parseInt(ctx.request.body.total_due)
         })
       // Product
       ctx.request.body.products.forEach(async prd => {

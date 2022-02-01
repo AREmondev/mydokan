@@ -15,6 +15,10 @@
             <label for="inputEmail4">Phone</label>
             <input v-model="phone"  type="text"  class="form-control" >
         </div>
+        <div class="form-group col-md-6 col-xl-4">
+            <label for="inputEmail4">Due</label>
+            <input v-model="due"  type="text"  class="form-control" >
+        </div>
         
         
         <button @click.prevent="updateCustomer" class="btn btn-primary w-75 text-center my-2 mx-auto">Submit</button>

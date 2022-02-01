@@ -57,10 +57,11 @@ export default {
                 var today = new Date()
                 let url = API_URL(`transitions/`);
                 let data = {
-                    "time": today.getFullYear()+'-'+(today.getMonth() + 1)+'-'+today.getDate(),
+                    "time": today,
                     "payment": this.payment,
                     "customer_id": this.$route.query.name
                 }
+                console.log(data)
                 let token = "Bearer " + localStorage.getItem("token")
                 this.$axios.post(url, data, {headers: {Authorization: token}}).then(response => {
                     console.log(response)
